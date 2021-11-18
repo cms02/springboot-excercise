@@ -12,6 +12,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.util.ArrayList;
 import java.util.List;
 
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -26,9 +27,7 @@ import com.cms.book.domain.Book;
 import com.cms.book.service.BookService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import ch.qos.logback.core.boolex.Matcher;
 import lombok.extern.slf4j.Slf4j;
-import org.hamcrest.Matchers;
 
 
 /**
@@ -36,7 +35,6 @@ import org.hamcrest.Matchers;
  * @WebMvcTest 실제 Controller, Filter, ControllerAdvice 를 IoC 컨테이너에 띄움
  * @MockBean IoC환경에 bean 등록됨
  */
-@Slf4j
 @WebMvcTest
 public class BookControllerUnitTest {
 	

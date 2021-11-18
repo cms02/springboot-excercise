@@ -32,6 +32,7 @@ import com.cms.book.domain.Book;
 import com.cms.book.domain.BookRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import ch.qos.logback.classic.Logger;
 import lombok.extern.slf4j.Slf4j;
 
 
@@ -46,7 +47,6 @@ import lombok.extern.slf4j.Slf4j;
  *
  */
 
-@Slf4j
 @Transactional
 @AutoConfigureMockMvc
 @SpringBootTest(webEnvironment = WebEnvironment.MOCK) // 실제 톰캣을 올리는게 아니라, 다른 톰캣으로 테스트
